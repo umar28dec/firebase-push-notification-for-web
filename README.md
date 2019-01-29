@@ -35,5 +35,7 @@ curl -X POST -H "Authorization: key=AAAAIBVLMZk:APA91bHqCXcstZOPiZLBiwEsfdUSboJ9
 Limit for multiple tokens
 https://stackoverflow.com/questions/39997272/fcm-firebase-cloud-messaging-send-to-multiple-device-group
 
+SSl needed for push notification, it could be self signed 
+
 
 
