@@ -1,0 +1,73 @@
+<html>
+<title>Firebase Messaging Demo</title>
+<style>
+    div {
+        margin-bottom: 15px;
+    }
+</style>
+<body>
+    <div id="token"></div>
+    <div id="msg"></div>
+    <div id="notis"></div>
+    <div id="err"></div>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script>
+        MsgElem = document.getElementById("msg")
+        TokenElem = document.getElementById("token")
+        NotisElem = document.getElementById("notis")
+        ErrElem = document.getElementById("err")
+        // Initialize Firebase
+        // TODO: Replace with your project's customized code snippet
+        var config = {
+    apiKey: "AIzaSyD9-YcSPnjxHPkyovX_-B-igbPNae0Ij5E",
+    authDomain: "web-push-d6187.firebaseapp.com",
+    databaseURL: "https://web-push-d6187.firebaseio.com",
+    projectId: "web-push-d6187",
+    storageBucket: "web-push-d6187.appspot.com",
+    messagingSenderId: "836915258280"
+  };
+        firebase.initializeApp(config);
+
+        const messaging = firebase.messaging();
+        messaging
+            .requestPermission()    
+            .then(function () {
+                MsgElem.innerHTML = "Notification permission granted." 
+                console.log("Notification permission granted.");
+                
+                // get the token in the form of promise
+                return messaging.getToken()
+            })
+            .then(function(token) {
+                TokenElem.innerHTML = "token is : " + token
+            })
+            .catch(function (err) {
+                ErrElem.innerHTML =  ErrElem.innerHTML + "; " + err
+                console.log("Unable to get permission to notify.", err);
+            });
+
+       messaging.onMessage(function(payload) {
+    const notificationTitle = payload.notification.title;
+    const notificationOptions = {
+        body: payload.notification.body,
+        icon: payload.notification.icon,        
+    };
+
+    if (!("Notification" in window)) {
+        console.log("This browser does not support system notifications");
+    }
+    // Let's check whether notification permissions have already been granted
+    else if (Notification.permission === "granted") {
+        // If it's okay let's create a notification
+        var notification = new Notification(notificationTitle,notificationOptions);
+        notification.onclick = function(event) {
+            event.preventDefault(); // prevent the browser from focusing the Notification's tab
+            window.open(payload.notification.click_action , '_blank');
+            notification.close();
+        }
+    }
+});
+        
+    </script>
+
+</html>
