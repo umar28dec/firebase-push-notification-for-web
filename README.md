@@ -23,4 +23,17 @@ curl -X POST -H "Authorization: key=AAAAIBVLMZk:APA91bHqCXcstZOPiZLBiwEsfdUSboJ9
 }' "https://fcm.googleapis.com/fcm/send"
 
 
+curl -X POST -H "Authorization: key=AAAAIBVLMZk:APA91bHqCXcstZOPiZLBiwEsfdUSboJ9O0qGdEiFDO4BQ4RbNSdM6CbLFSMj6R6RFZPnyyY6jlYix005ktkivh9gWgxa0bX3O1b3jfLeUyTJ4Yq0E8CROKXIoIvL9QP5IzK47ActtDny" -H "Content-Type: application/json" -d '{
+   "data":{
+   "message":"The quick brown Fox jumps over the lazy dog",
+   "image":"https://www.drivespark.com/images/2019-01/yamaha-fz-fz-s-2019-9.jpg",
+   "title":"App new notification"
+ },
+  "registration_ids": ["dLHXIPRj0Jg:APA91bF6tDRRhPrRM94rF5wwW4x4vtVzg9sOqHIsC5w92ZN3I9HQNP1jb9Ehjf7sF9GeSodDJlwNSM572LMB_G-4mESVRCpmtlg40CBYl0BJdlOtjxNiEze4LBOG1kmHwRUn7lBQqKUi","e3y-3H9YbPQ:APA91bGCZK7iXzuQO2c_eTIPOld6lGKUMiuJQPsrKdNF2N0gIkJSV3Hu2vVVRMzfbEZMLEUOeMuwxqRlu8Ls2mZiwf--EWi-wlm8UG3frzTKZvrI1JCgjk0f1u7he14ONTFHUwsYvJvZ"]
+}' "https://fcm.googleapis.com/fcm/send"
+
+Limit for multiple tokens
+https://stackoverflow.com/questions/39997272/fcm-firebase-cloud-messaging-send-to-multiple-device-group
+
+
 
