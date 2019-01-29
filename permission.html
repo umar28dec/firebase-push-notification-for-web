@@ -9,21 +9,36 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script>
-            Notification.requestPermission().then(function(result) {
-  if (result === 'denied') {
-    console.log('Permission wasn\'t granted. Allow a retry.');
+        <script>// request permission on page load
+document.addEventListener('DOMContentLoaded', function () {
+  if (!Notification) {
+    alert('Desktop notifications not available in your browser. Try Chromium.'); 
     return;
   }
-  if (result === 'default') {
-    console.log('The permission request was dismissed.');
-    return;
-  }
-  // Do something with the granted permission.
+
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
 });
-            </script>
+
+function notifyMe() {
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
+  else {
+    var notification = new Notification('Notification title', {
+      icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+      body: "Hey there! You've been notified!",
+    });
+
+    notification.onclick = function () {
+      window.open("http://stackoverflow.com/a/13328397/1269037");      
+    };
+
+  }
+
+}</script>
     </head>
     <body>
         <div>TODO write content</div>
+        <button onclick="notifyMe()">Notify me!</button>
     </body>
 </html>
