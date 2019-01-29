@@ -37,5 +37,12 @@ https://stackoverflow.com/questions/39997272/fcm-firebase-cloud-messaging-send-t
 
 SSl needed for push notification, it could be self signed 
 
+CReate topics for notification and get topic list
+https://stackoverflow.com/questions/40389335/how-to-subscribe-to-topics-with-web-browser-using-firebase-cloud-messaging
+
+
+https://developers.google.com/instance-id/reference/server#get_information_about_app_instances
+
+https://iid.googleapis.com/iid/info/eMqdRJkeAmM:APA91bEVu-e07qqpf6GMCQxd84X4mDMyLXWTaR6IkSdGH1w9AV30oiLss6yk3TRe0Fvf1oolS6dKHc4rxni7v4lt7RGyXT2dEWJQLQ2y9pnpJorEhJltgJz8GjKGHiINCVXAnI2mbU2x?details=true
 
 
