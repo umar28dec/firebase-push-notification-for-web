@@ -102,3 +102,6 @@ var vis = (function(){
     }
 })();
 ```
+vis(function(){
+  document.title = vis() ? 'Visible' : 'Not visible';
+});
