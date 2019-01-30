@@ -53,4 +53,31 @@ https://developers.google.com/instance-id/reference/server#get_information_about
 
 https://iid.googleapis.com/iid/info/eMqdRJkeAmM:APA91bEVu-e07qqpf6GMCQxd84X4mDMyLXWTaR6IkSdGH1w9AV30oiLss6yk3TRe0Fvf1oolS6dKHc4rxni7v4lt7RGyXT2dEWJQLQ2y9pnpJorEhJltgJz8GjKGHiINCVXAnI2mbU2x?details=true
 
+For Sound Notification
+
+https://stackoverflow.com/questions/37959588/no-notification-sound-when-sending-notification-from-firebase-in-android
+
+https://firebase.google.com/docs/cloud-messaging/http-server-ref#notification-payload-support
+
+sound	Optional, string	
+The sound to play when the device receives the notification.
+
+Supports "default" or the filename of a sound resource bundled in the app. Sound files must reside in /res/raw/.
+
+
+statistics not shows in case of api
+https://stackoverflow.com/questions/40065002/is-it-possible-to-get-push-notification-stats-like-count-of-deliveries-and-opens
+
+
+
+Create Topic using api and subscribe
+
+https://iid.googleapis.com/iid/v1/dEsJfy6bS64:APA91bGh01BS6HbopHgH_6KXI9_-I7U-OqaWTbXAHlRu_-SeJxlh9uRzmsB4LE4xL7QjmQChXZvV2f0Jlaw3EPjArydPKWZlSHs5VmmsZe_N_xfp7UoBsPBJHOxkNgAXt8Ek3-V2_D2e/rel/topics/web1
+
+
+For More details 
+https://developers.google.com/instance-id/reference/server#create_relationship_maps_for_app_instances
+
+Time to live 
+"time_to_live":"600"
 
